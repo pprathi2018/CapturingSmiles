@@ -54,7 +54,6 @@ def main():
         curr_image = cv.imread(saved_img_path).astype('float32')
         resized = np.array([cv.resize(curr_image, (227, 227))])
         prediction = convert_prediction(model.predict(resized)[0][0])
-        print(prediction)
         if prediction == 1:
           smile_counter += 1
           if smile_counter >= 10:
