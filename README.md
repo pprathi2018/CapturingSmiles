@@ -14,5 +14,7 @@ Models:
 
 For each model with necessary hyperparameters, we performed GridSearchCV to select the optimal hyperparameters based on the scores of the validation set. Since our dataset consists of only 4000 images, we evaluated model results by performing k-fold cross validation with 10 folds. 
 
+The ExploreData notebook contains exploratory data analysis steps, and the models notebook contains all of the training, outputs, and metric evaluation for our models. 
+
 # Live Camera Application
 The videocapture.py file uses the AlexNet trained model and OpenCVs VideoStream to read frames from the camera and predict whether you are smiling or not. If the prediction is positive for 10 consecutive frames, your image will be saved to the results/ directory. To run this application, the pretrained model needs to be downloaded from [here](https://drive.google.com/file/d/1PgAPne9qyFekXQRR3nPV_aM297hB-Oeb/view?usp=sharing), and unzipped in the same directory as videocapture.py. Then, the python file needs to be run (any necessary dependencies will need to be installed). 
